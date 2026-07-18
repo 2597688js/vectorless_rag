@@ -44,35 +44,54 @@ PDF → page_index_main() (local) → Ollama (local) → Needs: Nothing! ✅
 
 ---
 
-## Setup (5 minutes)
+## Setup (10 minutes)
 
-### 1. Install Ollama
+### 1. Clone PageIndex Repository
+
+The local PageIndex library is required. Clone it into the project directory:
+
+```bash
+# Navigate to the vectorless_rag directory
+cd /path/to/vectorless_rag
+
+# Clone PageIndex repository
+git clone git@github.com:VectifyAI/PageIndex.git
+
+# OR if you don't have SSH set up:
+git clone https://github.com/VectifyAI/PageIndex.git
+
+# The repository will be cloned into ./PageIndex/
+```
+
+**Note:** The `pageindex/` directory in this project is the local library that imports from the cloned repository.
+
+### 2. Install Ollama
 
 **macOS:**
 - Download from [ollama.ai](https://ollama.ai)
 - Or: `brew install ollama`
 
-### 2. Start Ollama
+### 3. Start Ollama
 
 ```bash
 ollama serve
 # You should see: "Listening on 127.0.0.1:11434"
 ```
 
-### 3. Pull the Model (in new terminal)
+### 4. Pull the Model (in new terminal)
 
 ```bash
 ollama pull qwen2.5:1.5b
 ```
 
-### 4. Install Dependencies
+### 5. Install Dependencies
 
 ```bash
 cd /path/to/vectorless_rag
 pip install -r requirements.txt
 ```
 
-### 5. Verify Setup
+### 6. Verify Setup
 
 ```bash
 curl -s http://localhost:11434/api/tags | grep qwen2.5
@@ -260,14 +279,22 @@ Answer
 
 ```
 .
-├── local_pageindex.py           # Main script
-├── pageindex/                   # Local PageIndex library
-│   ├── config.yaml              # Configuration file
-│   ├── page_index.py            # Core logic
+├── PageIndex/                   # Cloned from GitHub (required!)
+│   └── pageindex/               # PageIndex library source
+├── pageindex/                   # Local PageIndex library (imports from PageIndex/)
+│   ├── config.yaml              # Ollama configuration
+│   ├── page_index.py            # Core tree generation
 │   └── utils.py                 # Utilities
+├── local_pageindex.py           # Main script
 ├── indexed_documents/           # Output tree JSONs
-├── README.md                    # This file
-└── requirements.txt             # Dependencies
+├── README.md                    # Documentation
+└── requirements.txt             # Python dependencies
+```
+
+**Important:** Clone PageIndex repository first:
+```bash
+git clone git@github.com:VectifyAI/PageIndex.git
+# OR: git clone https://github.com/VectifyAI/PageIndex.git
 ```
 
 ---
@@ -275,9 +302,14 @@ Answer
 ## Quick Start (Copy-Paste)
 
 ```bash
+# 0. Clone PageIndex repository
+cd /path/to/vectorless_rag
+git clone git@github.com:VectifyAI/PageIndex.git
+# OR: git clone https://github.com/VectifyAI/PageIndex.git
+
 # 1. Install Ollama from https://ollama.ai
 
-# 2. Start Ollama (keep running)
+# 2. Start Ollama (keep running in one terminal)
 ollama serve
 
 # 3. In new terminal:
