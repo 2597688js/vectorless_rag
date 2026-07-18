@@ -9,12 +9,8 @@ Local, API-key-free document intelligence system using PageIndex and Ollama.
 ```bash
 cd /path/to/vectorless_rag
 
-# Clone using SSH
+# Clone pageindex repo
 git clone git@github.com:VectifyAI/PageIndex.git
-
-# OR clone using HTTPS
-git clone https://github.com/VectifyAI/PageIndex.git
-```
 
 ---
 
