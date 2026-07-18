@@ -40,16 +40,27 @@ ollama pull qwen2.5:1.5b
 pip install -r requirements.txt
 ```
 
-### Step 5: Index a PDF
+### Step 5: Index a PDF (Local or URL)
 
+**Local PDF:**
 ```bash
 python3 local_pageindex.py ~/Desktop/Resume.pdf
+```
+
+**From URL:**
+```bash
+python3 local_pageindex.py https://arxiv.org/pdf/1706.03762
 ```
 
 ### Step 6: Query the Document
 
 ```bash
 python3 local_pageindex.py ~/Desktop/Resume.pdf --query "What are the skills?"
+```
+
+**Or query from URL:**
+```bash
+python3 local_pageindex.py https://arxiv.org/pdf/1706.03762 --query "What is this paper about?"
 ```
 
 ---

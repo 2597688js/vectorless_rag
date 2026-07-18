@@ -16,6 +16,35 @@ from pageindex.utils import ConfigLoader
 import pageindex.utils as utils
 
 
+def is_url(path):
+    """Check if path is a URL"""
+    return path.startswith('http://') or path.startswith('https://')
+
+
+def download_pdf_from_url(url):
+    """Download PDF from URL and save to temp location"""
+    try:
+        print(f"📥 Downloading PDF from URL: {url}")
+        response = requests.get(url, timeout=30)
+        response.raise_for_status()
+
+        # Extract filename from URL
+        filename = url.split('/')[-1]
+        if not filename.endswith('.pdf'):
+            filename = f"downloaded_{len(os.listdir('/tmp'))}.pdf"
+
+        # Save to temp directory
+        temp_path = f"/tmp/{filename}"
+        with open(temp_path, 'wb') as f:
+            f.write(response.content)
+
+        print(f"✓ PDF downloaded successfully: {temp_path}")
+        return temp_path
+    except Exception as e:
+        print(f"✗ Error downloading PDF: {e}")
+        sys.exit(1)
+
+
 def verify_ollama():
     """Check if Ollama is running"""
     try:
@@ -212,7 +241,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Vectorless RAG with Local PageIndex + Ollama LLM"
     )
-    parser.add_argument("pdf_path", help="Path to PDF file to index")
+    parser.add_argument("pdf_path", help="Path to PDF file or URL (e.g., https://arxiv.org/pdf/1706.03762)")
     parser.add_argument("--query", help="Query to search the document")
     parser.add_argument("--model", help="Ollama model (default: qwen2.5:1.5b)")
     parser.add_argument("--output-dir", default="indexed_documents", help="Output directory")
@@ -226,8 +255,13 @@ def main():
 
     print("\n✨ Using Local PageIndex - NO API KEYS REQUIRED!")
 
+    # Handle URL or local file
+    pdf_path = args.pdf_path
+    if is_url(pdf_path):
+        pdf_path = download_pdf_from_url(pdf_path)
+
     # Index PDF locally (synchronous, before async context)
-    tree, doc_id = index_pdf_locally(args.pdf_path, args.model)
+    tree, doc_id = index_pdf_locally(pdf_path, args.model)
 
     # Save tree
     output_dir = Path(args.output_dir)
