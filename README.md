@@ -65,19 +65,6 @@ python3 local_pageindex.py https://arxiv.org/pdf/1706.03762 --query "What is thi
 
 ---
 
-## Using URLs (Complete Guide)
-
-### What are URLs?
-
-You can process PDFs directly from web links without downloading them manually. Just pass the URL as the first argument.
-
-### How to Use a URL
-
-**Basic syntax:**
-```bash
-python3 local_pageindex.py <URL> --query "<your question>"
-```
-
 **Example 1: Academic paper**
 ```bash
 python3 local_pageindex.py https://arxiv.org/pdf/1706.03762 --query "What is this paper about?"
@@ -87,27 +74,6 @@ python3 local_pageindex.py https://arxiv.org/pdf/1706.03762 --query "What is thi
 ```bash
 python3 local_pageindex.py https://example.com/research-paper.pdf --query "What are the findings?"
 ```
-
-**Example 3: Public PDF**
-```bash
-python3 local_pageindex.py https://example.org/document.pdf --query "What are the key points?"
-```
-
-### Supported URLs
-
-✅ Works with any publicly accessible PDF URL:
-- arXiv papers: `https://arxiv.org/pdf/...`
-- ResearchGate: `https://researchgate.net/...`
-- GitHub: `https://github.com/.../releases/download/...`
-- Direct PDF links: `https://example.com/file.pdf`
-- Any other public PDF URL
-
-### How It Works
-
-1. **Detects URL** - Checks if input starts with `http://` or `https://`
-2. **Downloads PDF** - Automatically downloads to `/tmp/`
-3. **Processes Locally** - All processing happens on your machine
-4. **No Cloud Calls** - Complete privacy and offline capability
 
 ### Step-by-Step Example
 
@@ -121,55 +87,6 @@ python3 local_pageindex.py https://arxiv.org/pdf/1706.03762
 # 3. Query the document
 python3 local_pageindex.py https://arxiv.org/pdf/1706.03762 --query "What is the architecture?"
 ```
-
-### URL Processing Flow
-
-```
-Your URL
-   ↓
-System detects it's a URL
-   ↓
-Automatically downloads to /tmp/
-   ↓
-Processes locally (no cloud calls)
-   ↓
-Creates indexed tree
-   ↓
-Query with Ollama
-   ↓
-Get Answer
-```
-
-### Examples by Document Type
-
-**Academic Paper:**
-```bash
-python3 local_pageindex.py https://arxiv.org/pdf/1706.03762 --query "What is the main contribution?"
-```
-
-**Technical Manual:**
-```bash
-python3 local_pageindex.py https://example.com/manual.pdf --query "How do I install this?"
-```
-
-**Research Report:**
-```bash
-python3 local_pageindex.py https://example.org/report.pdf --query "What are the results?"
-```
-
-**Whitepaper:**
-```bash
-python3 local_pageindex.py https://example.io/whitepaper.pdf --query "What problem does this solve?"
-```
-
-### Notes
-
-- URLs must be publicly accessible (no authentication required)
-- PDF file must be downloadable (not restricted)
-- Large PDFs may take time to download and process
-- All processing stays local and private
-- No API keys needed for URL processing
-
 ---
 
 ## Features
