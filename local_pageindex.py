@@ -9,10 +9,6 @@ import sys
 import json
 import asyncio
 from pathlib import Path
-from dotenv import load_dotenv, find_dotenv
-
-# Load environment variables
-load_dotenv(find_dotenv())
 
 import requests
 from pageindex import page_index_main
