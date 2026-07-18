@@ -116,29 +116,61 @@ Example output file: `indexed_documents/Resume_2026_tree.json`
 
 #### How the API Key Was Bypassed
 
-**Original Flow:**
+**Original Flow (Cloud-based):**
 ```
-PDF → PageIndexClient (Cloud API) → Requires PAGEINDEX_API_KEY → Tree JSON
-```
-
-**New Local Flow:**
-```
-PDF → page_index_main() (Local) → Requires ConfigLoader + Ollama → Tree JSON
+PDF → PageIndexClient (needs API key) → OpenAI API → Tree JSON → Ollama Reasoning
+                       ↓
+              REQUIRES: PAGEINDEX_API_KEY + OPENAI_API_KEY
 ```
 
-**Technical Changes:**
-1. Replaced `PageIndexClient()` with `page_index_main()` from the local PageIndex library
-2. Used `ConfigLoader()` to load PageIndex configuration locally
-3. Tree structure automatically handled with flattening logic
-4. JSON responses from Ollama parsed robustly to handle truncation
-5. All processing stays on your machine - zero cloud calls for PDF processing
+**New Local Flow (100% Offline):**
+```
+PDF → page_index_main() (local) → Ollama (local model) → Tree JSON → Ollama Reasoning
+                    ↓
+            REQUIRES: Nothing! (just Ollama running)
+```
+
+**Technical Implementation:**
+
+1. **PDF Tree Generation:**
+   - `page_index_main()` from local PageIndex library (no cloud calls)
+   - Configuration: `pageindex/config.yaml` set to use `ollama/qwen2.5:1.5b`
+   - No API keys needed for this step
+
+2. **Query Processing:**
+   - Ollama-based reasoning over the tree structure
+   - Finds relevant document sections locally
+   - No external LLM API calls
+
+3. **Answer Generation:**
+   - Ollama-based answer synthesis from relevant content
+   - All LLM work happens locally on your machine
+
+**Key Configuration:**
+```yaml
+# pageindex/config.yaml
+model: "ollama/qwen2.5:1.5b"           # Uses local Ollama (was: gpt-4o-2024-11-20)
+retrieve_model: "ollama/qwen2.5:1.5b"  # Uses local Ollama (was: gpt-5.4)
+```
+
+This configuration means PageIndex automatically uses Ollama instead of OpenAI for all LLM operations during tree generation.
+
+#### What Was Bypassed
+
+| API Key | Status | Why |
+|---------|--------|-----|
+| `PAGEINDEX_API_KEY` | ❌ Bypassed | Using local `page_index_main()` instead of `PageIndexClient` |
+| `OPENAI_API_KEY` | ❌ Bypassed | PageIndex configured to use Ollama (`ollama/qwen2.5:1.5b`) |
+| `ANTHROPIC_API_KEY` | ❌ Bypassed | Ollama handles all LLM reasoning and generation |
+| Any LLM API Key | ❌ Bypassed | Local Ollama provides all LLM capabilities |
 
 #### Benefits of Local PageIndex
 
-✅ **No API Costs** — Run completely free on your local machine  
-✅ **No API Keys** — PAGEINDEX_API_KEY, OpenAI key, Anthropic key all optional
-✅ **Privacy** — All data stays local, nothing sent to external servers  
+✅ **Zero API Costs** — Run completely free on your local machine  
+✅ **Zero API Keys** — No external authentication required whatsoever
+✅ **Complete Privacy** — All data stays on your machine, nothing leaves
 ✅ **Offline Access** — Works without internet connection (after Ollama setup)  
-✅ **Fast Processing** — No network latency for queries or indexing  
-✅ **Customizable** — Full control over the LLM model and parameters  
-✅ **Open Source** — Uses open-source PageIndex library locally
+✅ **Fast Processing** — No network latency for indexing or queries  
+✅ **Full Control** — Customize LLM models and parameters easily  
+✅ **Open Source** — Uses open-source PageIndex library locally  
+✅ **Sustainable** — No dependency on external service availability
