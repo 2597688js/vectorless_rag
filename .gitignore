@@ -1,0 +1,8 @@
+# Environment variables
+.env
+
+# Virtual environments
+vectorless_venv/
+
+# Data (if generated/downloaded)
+data/
