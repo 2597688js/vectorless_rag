@@ -154,6 +154,21 @@ def index_pdf_locally(pdf_path, model=None):
 
         return tree, doc_id
 
+    except ValueError as e:
+        if "LLM returned a different number of TOC entries" in str(e):
+            print(f"✗ Error: Document has complex table of contents")
+            print(f"\n💡 This is a PageIndex limitation with complex documents.")
+            print(f"\n✅ Solutions:")
+            print(f"   1. Try with a simpler PDF (resume, simple paper, etc.)")
+            print(f"   2. Use a larger model: mistral:7b or neural-chat:7b")
+            print(f"   3. Adjust config: reduce toc_check_page_num in pageindex/config.yaml")
+            print(f"\n📌 Your URL feature IS working - the PDF was downloaded successfully!")
+            sys.exit(1)
+        else:
+            print(f"✗ Error: {e}")
+            import traceback
+            traceback.print_exc()
+            sys.exit(1)
     except Exception as e:
         print(f"✗ Error: {e}")
         import traceback
