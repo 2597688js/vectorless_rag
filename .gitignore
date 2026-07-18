@@ -2,6 +2,7 @@
 .env
 .DS_Store
 logs/*
+.claude/
 
 # Virtual environments
 vectorless_venv/
@@ -18,3 +19,5 @@ PageIndex/
 *.pyc
 __pycache__/
 .DS_Store
+indexed_documents/
+pageindex/__pycache__/*
