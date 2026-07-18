@@ -1,9 +1,19 @@
 # Environment variables
 .env
 .DS_Store
+logs/*
 
 # Virtual environments
 vectorless_venv/
 
 # Data (if generated/downloaded)
 data/
+
+# Temporary log files
+logs/*.json
+
+# Temporary directories (optional)
+8.PageIndex-main/
+*.pyc
+__pycache__/
+.DS_Store
