@@ -22,6 +22,10 @@ import re
 if not os.getenv("OPENAI_API_KEY") and os.getenv("CHATGPT_API_KEY"):
     os.environ["OPENAI_API_KEY"] = os.getenv("CHATGPT_API_KEY")
 
+# Configure LiteLLM for Ollama
+if not os.getenv("OLLAMA_BASE_URL"):
+    os.environ["OLLAMA_BASE_URL"] = "http://localhost:11434"
+
 litellm.drop_params = True
 
 def count_tokens(text, model=None):
@@ -35,6 +39,53 @@ def llm_completion(model, prompt, chat_history=None, return_finish_reason=False)
         model = model.removeprefix("litellm/")
     max_retries = 10
     messages = list(chat_history) + [{"role": "user", "content": prompt}] if chat_history else [{"role": "user", "content": prompt}]
+
+    # Handle Ollama models directly
+    if model and model.startswith("ollama/"):
+        import requests
+        base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+        model_name = model.replace("ollama/", "")
+        for i in range(max_retries):
+            try:
+                response = requests.post(
+                    f"{base_url}/api/chat",
+                    json={
+                        "model": model_name,
+                        "messages": messages,
+                        "stream": False,
+                        "temperature": 0,
+                    },
+                    timeout=300
+                )
+                if response.status_code == 200:
+                    content = response.json()["message"]["content"]
+                    if not content or not content.strip():
+                        logging.warning(f"[Ollama] Got empty response on attempt {i+1}/{max_retries}")
+                        if i < max_retries - 1:
+                            time.sleep(1)
+                            continue
+                        else:
+                            logging.error('Max retries reached - all responses empty')
+                            if return_finish_reason:
+                                return "", "error"
+                            return ""
+                    if return_finish_reason:
+                        return content, "finished"
+                    return content
+                else:
+                    raise Exception(f"Ollama error: {response.text}")
+            except Exception as e:
+                print('************* Retrying *************')
+                logging.error(f"Error: {e}")
+                if i < max_retries - 1:
+                    time.sleep(1)
+                else:
+                    logging.error('Max retries reached for prompt: ' + prompt[:100])
+                    if return_finish_reason:
+                        return "", "error"
+                    return ""
+
+    # Use LiteLLM for other models
     for i in range(max_retries):
         try:
             response = litellm.completion(
@@ -65,6 +116,39 @@ async def llm_acompletion(model, prompt):
         model = model.removeprefix("litellm/")
     max_retries = 10
     messages = [{"role": "user", "content": prompt}]
+
+    # Handle Ollama models directly
+    if model and model.startswith("ollama/"):
+        import httpx
+        base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+        model_name = model.replace("ollama/", "")
+        for i in range(max_retries):
+            try:
+                async with httpx.AsyncClient(timeout=300.0) as client:
+                    response = await client.post(
+                        f"{base_url}/api/chat",
+                        json={
+                            "model": model_name,
+                            "messages": messages,
+                            "stream": False,
+                            "temperature": 0,
+                        }
+                    )
+                    if response.status_code == 200:
+                        content = response.json()["message"]["content"]
+                        return content
+                    else:
+                        raise Exception(f"Ollama error: {response.text}")
+            except Exception as e:
+                print('************* Retrying *************')
+                logging.error(f"Error: {e}")
+                if i < max_retries - 1:
+                    await asyncio.sleep(1)
+                else:
+                    logging.error('Max retries reached for prompt: ' + prompt[:100])
+                    return ""
+
+    # Use LiteLLM for other models
     for i in range(max_retries):
         try:
             response = await litellm.acompletion(
@@ -79,7 +163,7 @@ async def llm_acompletion(model, prompt):
             if i < max_retries - 1:
                 await asyncio.sleep(1)
             else:
-                logging.error('Max retries reached for prompt: ' + prompt)
+                logging.error('Max retries reached for prompt: ' + prompt[:100])
                 return ""
             
             
@@ -99,6 +183,10 @@ def get_json_content(response):
 
 def extract_json(content):
     try:
+        if not content or not content.strip():
+            logging.error(f"extract_json received empty content")
+            return {}
+
         # First, try to extract JSON enclosed within ```json and ```
         start_idx = content.find("```json")
         if start_idx != -1:
@@ -118,6 +206,7 @@ def extract_json(content):
         return json.loads(json_content)
     except json.JSONDecodeError as e:
         logging.error(f"Failed to extract JSON: {e}")
+        logging.error(f"Content preview: {content[:200] if content else 'EMPTY'}")
         # Try to clean up the content further if initial parsing fails
         try:
             # Remove any trailing commas before closing brackets/braces

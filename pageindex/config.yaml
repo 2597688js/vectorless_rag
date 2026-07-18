@@ -1,9 +1,10 @@
-model: "ollama/qwen2.5:1.5b" #  "ollama/mistral:7b"
-# model: "gpt-4o-2024-11-20"
-# model: "anthropic/claude-sonnet-4-6"
-retrieve_model: "ollama/qwen2.5:1.5b"  #  "ollama/mistral:7b"
-toc_check_page_num: 5
-max_page_num_each_node: 5
+model: "ollama/mistral:7b"    # Local model - good for RAG
+# model: "ollama/qwen2.5:1.5b" # Alternative local model
+# model: "gpt-4o-2024-11-20"   # For complex documents (API-based)
+# model: "anthropic/claude-3-5-sonnet-20241022"  # For complex documents (API-based)
+retrieve_model: "ollama/mistral:7b"
+toc_check_page_num: 20
+max_page_num_each_node: 10
 max_token_num_each_node: 20000
 if_add_node_id: "yes"
 if_add_node_summary: "yes"
