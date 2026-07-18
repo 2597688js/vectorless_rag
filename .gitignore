@@ -1,5 +1,6 @@
 # Environment variables
 .env
+.DS_Store
 
 # Virtual environments
 vectorless_venv/
