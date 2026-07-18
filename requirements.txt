@@ -1,3 +1,5 @@
 openai
 pageindex
 python-dotenv
+requests
+httpx

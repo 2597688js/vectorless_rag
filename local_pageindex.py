@@ -282,9 +282,9 @@ async def query_and_answer(tree, query, model):
                 page_info = f" (Page {node.get('start_index', 'N/A')})" if 'start_index' in node else ""
                 print(f"  - {node['title']}{page_info}")
 
-        # Extract content from relevant nodes
+        # Extract content from relevant nodes (prefer text over summary)
         relevant_content = "\n\n".join(
-            f"## {node['title']}\n{node.get('summary', '')}"
+            f"## {node['title']}\n{node.get('text', node.get('summary', ''))}"
             for node in relevant_nodes
         )
 

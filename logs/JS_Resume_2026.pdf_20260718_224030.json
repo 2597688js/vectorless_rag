@@ -1,0 +1,145 @@
+[
+  {
+    "total_page_number": 1
+  },
+  {
+    "total_token": 884
+  },
+  {
+    "toc_content": null,
+    "toc_page_list": [],
+    "page_index_given_in_toc": "no"
+  },
+  {
+    "message": "len(group_texts): 1"
+  },
+  {
+    "message": "generate_toc: [{'structure': 1.0, 'title': 'Janarddan Sarkar', 'physical_index': 1}, {'structure': 2.0, 'title': 'Education', 'physical_index': 1}, {'structure': 3.0, 'title': '\u2022Indian Institute of Space Science and TechnologyThiruvananthapuram, Kerala\\nM.Tech in Machine Learning and Computing Jul 2019 \u2013 Jun 2021', 'physical_index': 1}, {'structure': 4.0, 'title': '\u2022Central Institute of TechnologyKokrajhar, Assam\\nB.Tech in Computer Science and Engineering Jul 2015 \u2013 Jun 2019', 'physical_index': 1}, {'structure': 5.0, 'title': 'Experience', 'physical_index': 1}, {'structure': 6.0, 'title': '\u2022EXL Digital Bengaluru, India\\nManager Data Scientist Feb 2025 \u2013 Present', 'physical_index': 1}, {'structure': 7.0, 'title': '\u25e6Roles and responsibilities: Driving data processing, feature engineering, and Generative AI solutions for insurance claim stabilization using RAG and Agentic architectures.', 'physical_index': 1}, {'structure': 8.0, 'title': '\u2022Costrategix TechnologiesBengaluru, India\\nData Scientist Jun 2023 \u2013 Feb 2025', 'physical_index': 1}, {'structure': 9.0, 'title': '\u25e6Roles and responsibilities: Built synthetic datasets, ML pipelines, and enhanced product performance through advanced preprocessing, model optimization, and feature engineering.', 'physical_index': 1}, {'structure': 10.0, 'title': '\u2022Continental AG Bengaluru, India\\nEngineer \u2013 Machine Learning (Promoted from Intern) Oct 2020 \u2013 Jun 2023', 'physical_index': 1}, {'structure': 11.0, 'title': '\u25e6Roles and responsibilities: Developed and optimized computer vision models for traffic sign and signal recognition, improving accuracy and deployment reliability in ADAS systems.', 'physical_index': 1}, {'structure': 12.0, 'title': 'Publications', 'physical_index': 1}, {'structure': 13.0, 'title': '\u2022Caption Generation for Traffic Signs Using a Deep Neural SchemeSAE International Conference Link: https://www.sae.org/publications/technical-papers/content/2022-28-0006/', 'physical_index': 1}, {'structure': 14.0, 'title': 'Projects', 'physical_index': 1}, {'structure': 15.0, 'title': '\u2022Video RAG \u2013 Chat with YouTube Videos (2026): Built an AI-powered Video RAG application that lets users chat with YouTube videos by analyzing the visual content such as diagrams, code snippets, and slides using OpenCV, Gemini Vision, ChromaDB, and Streamlit.', 'physical_index': 1}, {'structure': 16.0, 'title': '\u2022Personal Portfolio Website (2025): Developed a full-stack personal portfolio website with a React frontend and FastAPI backend API, featuring a Retrieval-Augmented Generation (RAG) AI chatbot to showcase professional work and projects while providing intelligent portfolio-related assistance.', 'physical_index': 1}, {'structure': 17.0, 'title': '\u2022Agentic MixRAG (2025): Agentic RAG application that processes documents, web content, and images to provide context-aware, intelligent question answering. Integrated advanced features, including OCR, workflow visualization, memory retention, and real-time streaming for enhanced user interaction and analytics.', 'physical_index': 1}, {'structure': 18.0, 'title': '\u2022Knowledge Extraction and Insight System - KEIS (2025): Automated analysis of documents to detect status updates and milestones, reducing manual review and improving efficiency.', 'physical_index': 1}, {'structure': 19.0, 'title': '\u2022Smart QA-Assistant (2024): Developed a GenAI-powered Smart QA-Assistant that generates test plans, positive/negative test cases, and business flow diagrams, reducing QA task completion time from 2 days to under an hour.', 'physical_index': 1}, {'structure': 20.0, 'title': '\u2022SQL AI Assistant (2024): Developed a SQL AI assistant using GPT models to help users write SQL queries in natural language. Enabled users to express data retrieval needs without knowing SQL syntax, with the system interpreting and generating accurate SQL queries.', 'physical_index': 1}, {'structure': 21.0, 'title': '\u2022Semantic Datatype Detection (2023-2024): Utilize a deep learning model named Sherlock, with necessary updates, to detect the semantic datatype within a given structured dataset, followed by substitution with GPT-based models.', 'physical_index': 1}, {'structure': 22.0, 'title': '\u2022Next-Gen ADAS Classifier Toolchain (2021-2023): Developed deep learning-based classifier pipelines for next-generation ADAS systems.', 'physical_index': 1}, {'structure': 23.0, 'title': '\u2022Traffic Sign Captioning Prototype (2020-2021): Designed a deep learning solution combining computer vision concepts and NLP techniques to generate captions for unknown traffic signs.', 'physical_index': 1}, {'structure': 24.0, 'title': 'Certifications', 'physical_index': 1}, {'structure': 25.0, 'title': '\u2022Microsoft Certified: Azure Data Scientist Associate', 'physical_index': 1}, {'structure': 26.0, 'title': 'Programming Skills', 'physical_index': 1}, {'structure': 27.0, 'title': '\u2022Languages: Python, TensorFlow, Keras, PyTorch, OpenCV, Scikit-learn, Flask, FastAPI, JavaScript, C++, C\\n\u2022Databases: MySQL, SQLite, MongoDB, PostgreSQL', 'physical_index': 1}, {'structure': 28.0, 'title': 'Technologies', 'physical_index': 1}, {'structure': 29.0, 'title': '\u2022GenAI, RAG, GraphRAG, CRAG, Vectorless RAG, Prompt Engineering, LangChain, LangGraph, LangSmith, Agentic AI, Vector DBs, Databricks, AWS, Azure, LLM Fine-tuning, Docker, MLflow, Web Technologies, VPS', 'physical_index': 1}]"
+  },
+  {
+    "message": "convert_physical_index_to_int: [{'structure': 1.0, 'title': 'Janarddan Sarkar', 'physical_index': 1}, {'structure': 2.0, 'title': 'Education', 'physical_index': 1}, {'structure': 3.0, 'title': '\u2022Indian Institute of Space Science and TechnologyThiruvananthapuram, Kerala\\nM.Tech in Machine Learning and Computing Jul 2019 \u2013 Jun 2021', 'physical_index': 1}, {'structure': 4.0, 'title': '\u2022Central Institute of TechnologyKokrajhar, Assam\\nB.Tech in Computer Science and Engineering Jul 2015 \u2013 Jun 2019', 'physical_index': 1}, {'structure': 5.0, 'title': 'Experience', 'physical_index': 1}, {'structure': 6.0, 'title': '\u2022EXL Digital Bengaluru, India\\nManager Data Scientist Feb 2025 \u2013 Present', 'physical_index': 1}, {'structure': 7.0, 'title': '\u25e6Roles and responsibilities: Driving data processing, feature engineering, and Generative AI solutions for insurance claim stabilization using RAG and Agentic architectures.', 'physical_index': 1}, {'structure': 8.0, 'title': '\u2022Costrategix TechnologiesBengaluru, India\\nData Scientist Jun 2023 \u2013 Feb 2025', 'physical_index': 1}, {'structure': 9.0, 'title': '\u25e6Roles and responsibilities: Built synthetic datasets, ML pipelines, and enhanced product performance through advanced preprocessing, model optimization, and feature engineering.', 'physical_index': 1}, {'structure': 10.0, 'title': '\u2022Continental AG Bengaluru, India\\nEngineer \u2013 Machine Learning (Promoted from Intern) Oct 2020 \u2013 Jun 2023', 'physical_index': 1}, {'structure': 11.0, 'title': '\u25e6Roles and responsibilities: Developed and optimized computer vision models for traffic sign and signal recognition, improving accuracy and deployment reliability in ADAS systems.', 'physical_index': 1}, {'structure': 12.0, 'title': 'Publications', 'physical_index': 1}, {'structure': 13.0, 'title': '\u2022Caption Generation for Traffic Signs Using a Deep Neural SchemeSAE International Conference Link: https://www.sae.org/publications/technical-papers/content/2022-28-0006/', 'physical_index': 1}, {'structure': 14.0, 'title': 'Projects', 'physical_index': 1}, {'structure': 15.0, 'title': '\u2022Video RAG \u2013 Chat with YouTube Videos (2026): Built an AI-powered Video RAG application that lets users chat with YouTube videos by analyzing the visual content such as diagrams, code snippets, and slides using OpenCV, Gemini Vision, ChromaDB, and Streamlit.', 'physical_index': 1}, {'structure': 16.0, 'title': '\u2022Personal Portfolio Website (2025): Developed a full-stack personal portfolio website with a React frontend and FastAPI backend API, featuring a Retrieval-Augmented Generation (RAG) AI chatbot to showcase professional work and projects while providing intelligent portfolio-related assistance.', 'physical_index': 1}, {'structure': 17.0, 'title': '\u2022Agentic MixRAG (2025): Agentic RAG application that processes documents, web content, and images to provide context-aware, intelligent question answering. Integrated advanced features, including OCR, workflow visualization, memory retention, and real-time streaming for enhanced user interaction and analytics.', 'physical_index': 1}, {'structure': 18.0, 'title': '\u2022Knowledge Extraction and Insight System - KEIS (2025): Automated analysis of documents to detect status updates and milestones, reducing manual review and improving efficiency.', 'physical_index': 1}, {'structure': 19.0, 'title': '\u2022Smart QA-Assistant (2024): Developed a GenAI-powered Smart QA-Assistant that generates test plans, positive/negative test cases, and business flow diagrams, reducing QA task completion time from 2 days to under an hour.', 'physical_index': 1}, {'structure': 20.0, 'title': '\u2022SQL AI Assistant (2024): Developed a SQL AI assistant using GPT models to help users write SQL queries in natural language. Enabled users to express data retrieval needs without knowing SQL syntax, with the system interpreting and generating accurate SQL queries.', 'physical_index': 1}, {'structure': 21.0, 'title': '\u2022Semantic Datatype Detection (2023-2024): Utilize a deep learning model named Sherlock, with necessary updates, to detect the semantic datatype within a given structured dataset, followed by substitution with GPT-based models.', 'physical_index': 1}, {'structure': 22.0, 'title': '\u2022Next-Gen ADAS Classifier Toolchain (2021-2023): Developed deep learning-based classifier pipelines for next-generation ADAS systems.', 'physical_index': 1}, {'structure': 23.0, 'title': '\u2022Traffic Sign Captioning Prototype (2020-2021): Designed a deep learning solution combining computer vision concepts and NLP techniques to generate captions for unknown traffic signs.', 'physical_index': 1}, {'structure': 24.0, 'title': 'Certifications', 'physical_index': 1}, {'structure': 25.0, 'title': '\u2022Microsoft Certified: Azure Data Scientist Associate', 'physical_index': 1}, {'structure': 26.0, 'title': 'Programming Skills', 'physical_index': 1}, {'structure': 27.0, 'title': '\u2022Languages: Python, TensorFlow, Keras, PyTorch, OpenCV, Scikit-learn, Flask, FastAPI, JavaScript, C++, C\\n\u2022Databases: MySQL, SQLite, MongoDB, PostgreSQL', 'physical_index': 1}, {'structure': 28.0, 'title': 'Technologies', 'physical_index': 1}, {'structure': 29.0, 'title': '\u2022GenAI, RAG, GraphRAG, CRAG, Vectorless RAG, Prompt Engineering, LangChain, LangGraph, LangSmith, Agentic AI, Vector DBs, Databricks, AWS, Azure, LLM Fine-tuning, Docker, MLflow, Web Technologies, VPS', 'physical_index': 1}]"
+  },
+  {
+    "mode": "process_toc_with_page_numbers",
+    "accuracy": 0.9655172413793104,
+    "incorrect_results": [
+      {
+        "list_index": 4,
+        "answer": "no",
+        "title": "Experience",
+        "page_number": 1
+      }
+    ]
+  },
+  {
+    "message": "incorrect_results_and_range_logs: [{'list_index': 4, 'title': 'Experience', 'prev_correct': 1, 'next_correct': 1}]"
+  },
+  {
+    "message": "invalid_results: [{'list_index': 4, 'title': 'Experience', 'physical_index': None}]"
+  },
+  {
+    "message": "incorrect_results_and_range_logs: [{'list_index': 4, 'title': 'Experience', 'prev_correct': 1, 'next_correct': 1}]"
+  },
+  {
+    "message": "invalid_results: [{'list_index': 4, 'title': 'Experience', 'physical_index': None}]"
+  },
+  {
+    "message": "incorrect_results_and_range_logs: [{'list_index': 4, 'title': 'Experience', 'prev_correct': 1, 'next_correct': 1}]"
+  },
+  {
+    "message": "invalid_results: [{'list_index': 4, 'title': 'Experience', 'physical_index': None}]"
+  },
+  {
+    "message": "Maximum fix attempts reached"
+  },
+  {
+    "message": "Checking title appearance in start concurrently"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Experience' is followed by a list of job positions and their respective durations.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Data Scientist Jun 2023 \u2013 Feb 2025' is found at the beginning of the given page text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title '\u2022SQL AI Assistant (2024): Developed a SQL AI assistant using GPT models to help users write SQL queries in natural language. Enabled users to express data retrieval needs without knowing SQL syntax, with the system interpreting and generating accurate SQL queries.' is located at the beginning of the given page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Video RAG \u2013 Chat with YouTube Videos (2026): Built an AI-powered Video RAG application that lets users chat with YouTube videos by analyzing the visual content such as diagrams, code snippets, and slides using OpenCV, Gemini Vision, ChromaDB, and Streamlit.' is located at the beginning of the given page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Publications' is followed by a list of publications and projects, which are all related to professional experience and skills.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Roles and responsibilities' is followed by a bullet point that describes driving data processing, feature engineering, and Generative AI solutions for insurance claim stabilization using RAG and Agentic architectures.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Semantic Datatype Detection (2023-2024): Utilize a deep learning model named Sherlock, with necessary updates, to detect the semantic datatype within a given structured dataset, followed by substitution with GPT-based models.' is not present in the provided page_text. The page_text does not contain any content related to this section title.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title '\u2022Smart QA-Assistant (2024): Developed a GenAI-powered Smart QA-Assistant that generates test plans, positive/negative test cases, and business flow diagrams, reducing QA task completion time from 2 days to under an hour.' is the first content in the given page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Caption Generation for Traffic Signs Using a Deep Neural SchemeSAE International Conference Link: https://www.sae.org/publications/technical-papers/content/2022-28-0006/' is the first content in the given page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Certifications' is located at the very beginning of the provided text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Roles and responsibilities' is followed by a bullet point that lists roles and responsibilities, which aligns with the content provided in the given page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title '\u2022EXL Digital Bengaluru, India Manager Data Scientist Feb 2025 \u2013 Present' is located at the beginning of the page_text and does not contain any other content before it.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title '\u2022Microsoft Certified: Azure Data Scientist Associate' is located at the very beginning of the provided text, which matches the criteria for starting in the beginning.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Janarddan Sarkar' is present at the very start of the given page text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Knowledge Extraction and Insight System - KEIS (2025): Automated analysis of documents to detect status updates and milestones, reducing manual review and improving efficiency.' is located at the beginning of the page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Projects' is located at the very beginning of the given page text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Roles and responsibilities: Driving data processing, feature engineering, and Generative AI solutions for insurance claim stabilization using RAG and Agentic architectures.' is located at the beginning of the page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Personal Portfolio Website (2025): Developed a full-stack personal portfolio website with a React frontend and FastAPI backend API, featuring a Retrieval-Augmented Generation (RAG) AI chatbot to showcase professional work and projects while providing intelligent portfolio-related assistance.' is the first content in the given page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title '\u2022Continental AG Bengaluru, India' Engineer \u2013 Machine Learning (Promoted from Intern) Oct 2020 \u2013 Jun 2023.' is located at the beginning of the given page_text. It does not contain any other content before it.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Education' is present at the beginning of the given page text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title '\u2022Indian Institute of Space Science and TechnologyThiruvananthapuram, Kerala' is followed by a bullet point that indicates education experience, which does not align with the expected content for this page. Therefore, it appears that the section does not start in the beginning of the given page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Technologies' is present at the very start of the given page text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title '\u2022Agentic MixRAG (2025): Agentic RAG application that processes documents, web content, and images to provide context-aware, intelligent question answering. Integrated advanced features, including OCR, workflow visualization, memory retention, and real-time streaming for enhanced user interaction and analytics.' is the first content in the given page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title '\u2022Central Institute of TechnologyKokrajhar, Assam B.Tech in Computer Science and Engineering Jul 2015 \u2013 Jun 2019' is present at the beginning of the page_text. It does not overlap with any other content before it.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title '\u2022Next-Gen ADAS Classifier Toolchain (2021-2023): Developed deep learning-based classifier pipelines for next-generation ADAS systems.' is located at the beginning of the page_text, which matches the criteria.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Programming Skills' is followed by a list of education and experience details, which are not part of the initial content provided.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Traffic Sign Captioning Prototype (2020-2021): Designed a deep learning solution combining computer vision concepts and NLP techniques to generate captions for unknown traffic signs.' is located at the beginning of the page_text, which matches the criteria.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title 'Languages: Python, TensorFlow, Keras, PyTorch, OpenCV, Scikit-learn, Flask, FastAPI, JavaScript, C++, C' is listed at the beginning of the page_text and does not contain any other content before it. This indicates that the section starts in the beginning of the given page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given section title '\u2022GenAI, RAG, GraphRAG, CRAG, Vectorless RAG, Prompt Engineering, LangChain, LangGraph, LangSmith, Agentic AI, Vector DBs, Databricks, AWS, Azure, LLM Fine-tuning, Docker, MLflow, Web Technologies, VPS' is present in the provided page_text. The section title appears at the beginning of the text.\", 'start_begin': 'yes'}"
+  }
+]

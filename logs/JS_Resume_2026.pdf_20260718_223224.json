@@ -1,0 +1,96 @@
+[
+  {
+    "total_page_number": 1
+  },
+  {
+    "total_token": 877
+  },
+  {
+    "toc_content": null,
+    "toc_page_list": [],
+    "page_index_given_in_toc": "no"
+  },
+  {
+    "message": "len(group_texts): 1"
+  },
+  {
+    "message": "generate_toc: [{'structure': '1', 'title': 'Education', 'physical_index': 1}, {'structure': '2', 'title': 'Experience', 'physical_index': 1}, {'structure': '2.1', 'title': 'EXL Digital Bengaluru, India Manager Data Scientist Feb 2025 \u2013 Present', 'physical_index': 1}, {'structure': '2.2', 'title': 'Costrategix Technologies Bengaluru, India Data Scientist Jun 2023 \u2013 Feb 2025', 'physical_index': 1}, {'structure': '2.3', 'title': 'Continental AG Bengaluru, India Engineer \u2013 Machine Learning (Promoted from Intern) Oct 2020 \u2013 Jun 2023', 'physical_index': 1}, {'structure': '3', 'title': 'Publications', 'physical_index': 1}, {'structure': '3.1', 'title': 'Caption Generation for Traffic Signs Using a Deep Neural Scheme SAE International Conference', 'physical_index': 1}, {'structure': '4', 'title': 'Projects', 'physical_index': 1}, {'structure': '4.1', 'title': 'Video RAG \u2013 Chat with YouTube Videos (2026)', 'physical_index': 1}, {'structure': '4.2', 'title': 'Personal Portfolio Website (2025)', 'physical_index': 1}, {'structure': '4.3', 'title': 'Agentic MixRAG (2025)', 'physical_index': 1}, {'structure': '4.4', 'title': 'Knowledge Extraction and Insight System - KEIS (2025)', 'physical_index': 1}, {'structure': '4.5', 'title': 'Smart QA-Assistant (2024)', 'physical_index': 1}, {'structure': '4.6', 'title': 'SQL AI Assistant (2024)', 'physical_index': 1}, {'structure': '4.7', 'title': 'Semantic Datatype Detection (2023-2024)', 'physical_index': 1}, {'structure': '4.8', 'title': 'Next-Gen ADAS Classifier Toolchain (2021-2023)', 'physical_index': 1}, {'structure': '4.9', 'title': 'Traffic Sign Captioning Prototype (2020-2021)', 'physical_index': 1}, {'structure': '5', 'title': 'Certifications', 'physical_index': 1}, {'structure': '6', 'title': 'Programming Skills', 'physical_index': 1}, {'structure': '6.1', 'title': 'Languages: Python, TensorFlow, Keras, PyTorch, OpenCV, Scikit-learn, Flask, FastAPI, JavaScript, C++, C', 'physical_index': 1}, {'structure': '6.2', 'title': 'Databases: MySQL, SQLite, MongoDB, PostgreSQL', 'physical_index': 1}, {'structure': '6.3', 'title': 'Technologies: GenAI, RAG, GraphRAG, CRAG, Vectorless RAG, Prompt Engineering, LangChain, LangGraph, LangSmith, Agentic AI, Vector DBs, Databricks, AWS, Azure, LLM Fine-tuning, Docker, MLflow, Web Technologies, VPS', 'physical_index': 1}]"
+  },
+  {
+    "message": "convert_physical_index_to_int: [{'structure': '1', 'title': 'Education', 'physical_index': 1}, {'structure': '2', 'title': 'Experience', 'physical_index': 1}, {'structure': '2.1', 'title': 'EXL Digital Bengaluru, India Manager Data Scientist Feb 2025 \u2013 Present', 'physical_index': 1}, {'structure': '2.2', 'title': 'Costrategix Technologies Bengaluru, India Data Scientist Jun 2023 \u2013 Feb 2025', 'physical_index': 1}, {'structure': '2.3', 'title': 'Continental AG Bengaluru, India Engineer \u2013 Machine Learning (Promoted from Intern) Oct 2020 \u2013 Jun 2023', 'physical_index': 1}, {'structure': '3', 'title': 'Publications', 'physical_index': 1}, {'structure': '3.1', 'title': 'Caption Generation for Traffic Signs Using a Deep Neural Scheme SAE International Conference', 'physical_index': 1}, {'structure': '4', 'title': 'Projects', 'physical_index': 1}, {'structure': '4.1', 'title': 'Video RAG \u2013 Chat with YouTube Videos (2026)', 'physical_index': 1}, {'structure': '4.2', 'title': 'Personal Portfolio Website (2025)', 'physical_index': 1}, {'structure': '4.3', 'title': 'Agentic MixRAG (2025)', 'physical_index': 1}, {'structure': '4.4', 'title': 'Knowledge Extraction and Insight System - KEIS (2025)', 'physical_index': 1}, {'structure': '4.5', 'title': 'Smart QA-Assistant (2024)', 'physical_index': 1}, {'structure': '4.6', 'title': 'SQL AI Assistant (2024)', 'physical_index': 1}, {'structure': '4.7', 'title': 'Semantic Datatype Detection (2023-2024)', 'physical_index': 1}, {'structure': '4.8', 'title': 'Next-Gen ADAS Classifier Toolchain (2021-2023)', 'physical_index': 1}, {'structure': '4.9', 'title': 'Traffic Sign Captioning Prototype (2020-2021)', 'physical_index': 1}, {'structure': '5', 'title': 'Certifications', 'physical_index': 1}, {'structure': '6', 'title': 'Programming Skills', 'physical_index': 1}, {'structure': '6.1', 'title': 'Languages: Python, TensorFlow, Keras, PyTorch, OpenCV, Scikit-learn, Flask, FastAPI, JavaScript, C++, C', 'physical_index': 1}, {'structure': '6.2', 'title': 'Databases: MySQL, SQLite, MongoDB, PostgreSQL', 'physical_index': 1}, {'structure': '6.3', 'title': 'Technologies: GenAI, RAG, GraphRAG, CRAG, Vectorless RAG, Prompt Engineering, LangChain, LangGraph, LangSmith, Agentic AI, Vector DBs, Databricks, AWS, Azure, LLM Fine-tuning, Docker, MLflow, Web Technologies, VPS', 'physical_index': 1}]"
+  },
+  {
+    "mode": "process_toc_with_page_numbers",
+    "accuracy": 1.0,
+    "incorrect_results": []
+  },
+  {
+    "message": "Checking title appearance in start concurrently"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Publications' is not the first content in the given page_text. There are other sections such as personal details, education, and experience listed before the 'Publications' section.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given page_text contains other content such as personal details, education, experience, publications, projects, and certifications before the 'Programming Skills' section title. Therefore, the 'Programming Skills' section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Experience' is not the first content in the given page_text. The page_text starts with personal details (name, email, website, etc.) and an 'Education' section before the 'Experience' section appears.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given page_text contains other content such as personal details, education, experience, and publications before the section title 'Projects'. Therefore, the section 'Projects' does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Semantic Datatype Detection (2023-2024)' appears in the page_text, but it is preceded by other content such as personal details, education, experience, and other projects. Therefore, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given section title 'Smart QA-Assistant (2024)' does not appear at the very beginning of the page_text. There are other contents such as personal details, education, experience, and other sections before the given section title appears.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given section title 'EXL Digital Bengaluru, India Manager Data Scientist Feb 2025 \u2013 Present' is not the first content in the page_text. The page_text starts with personal details such as name, email, website, and LinkedIn information, followed by the Education section. The section title appears later under the Experience section.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Certifications' is not the first content in the given page_text. There are other sections and content such as personal details, education, experience, publications, and projects that appear before the 'Certifications' section.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given section title 'Personal Portfolio Website (2025)' does not appear at the very beginning of the page_text. There are other contents such as personal details, education, experience, and other sections before the 'Projects' section where the given title is located.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given section title 'Continental AG Bengaluru, India Engineer \u2013 Machine Learning (Promoted from Intern) Oct 2020 \u2013 Jun 2023' appears in the page_text under the 'Experience' section. However, there is other content such as personal details, education, and prior experience listed before this section title in the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given section title 'SQL AI Assistant (2024)' does not appear at the beginning of the page_text. The page_text starts with personal information and other sections such as Education, Experience, Publications, and Projects before reaching the section containing 'SQL AI Assistant (2024)'.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Languages: Python, TensorFlow, Keras, PyTorch, OpenCV, Scikit-learn, Flask, FastAPI, JavaScript, C++, C' appears under the 'Programming Skills' section in the page_text. However, there is other content such as personal details, education, experience, publications, projects, and certifications before the 'Programming Skills' section. Therefore, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given section title 'Caption Generation for Traffic Signs Using a Deep Neural Scheme SAE International Conference' appears under the 'Publications' section in the page_text. However, there is other content such as personal details, education, experience, and other sections before the 'Publications' section. Therefore, the section title does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given section title 'Knowledge Extraction and Insight System - KEIS (2025)' appears in the page_text under the 'Projects' section, but it is not the first content in the page_text. The page_text starts with personal information, education, experience, and other sections before reaching the 'Projects' section where the given title is mentioned.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Education' is not the first content in the given page_text. There are other contents such as the name, email, website, mobile number, LinkedIn, and GitHub information before the section title.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given section title 'Agentic MixRAG (2025)' does not appear at the very beginning of the page_text. There are other contents such as personal details, education, experience, and other sections before the given section title appears in the Projects section.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given section title 'Next-Gen ADAS Classifier Toolchain (2021-2023)' does not appear at the beginning of the page_text. There are other contents such as personal details, education, experience, and other projects listed before the section title appears.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given section title 'Databases: MySQL, SQLite, MongoDB, PostgreSQL' appears in the page_text under the 'Programming Skills' section. However, there is other content such as personal details, education, experience, projects, and certifications before this section in the page_text. Therefore, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given section title 'Traffic Sign Captioning Prototype (2020-2021)' appears in the page_text under the 'Projects' section. However, there is other content such as personal details, education, experience, publications, and other projects listed before this section title. Therefore, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given section title 'Video RAG \u2013 Chat with YouTube Videos (2026)' appears in the page_text under the 'Projects' section, but it is not the first content in the page_text. The page_text starts with personal details, followed by education, experience, publications, and then projects. Therefore, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Technologies: GenAI, RAG, GraphRAG, CRAG, Vectorless RAG, Prompt Engineering, LangChain, LangGraph, LangSmith, Agentic AI, Vector DBs, Databricks, AWS, Azure, LLM Fine-tuning, Docker, MLflow, Web Technologies, VPS' appears in the page_text under the 'Programming Skills' section. However, there are other contents such as personal details, education, experience, publications, projects, and certifications before this section in the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given section title 'Costrategix Technologies Bengaluru, India Data Scientist Jun 2023 \u2013 Feb 2025' does not appear at the very beginning of the page_text. There are other contents such as personal details, education, and experience headers before the section title appears.\", 'start_begin': 'no'}"
+  }
+]
